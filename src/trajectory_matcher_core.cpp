@@ -509,6 +509,11 @@ void TrajectoryMatcher::timerCallback(const ros::TimerEvent &event)
               << "roll:" << roll_ << std::endl
               << "pitch:" << pitch_ << std::endl
               << "yaw:" << yaw_ << std::endl << std::endl);
+    ROS_INFO_STREAM(std::endl << std::fixed <<
+    "-trans "<< final_translation[0]<<","<<final_translation[1]<<","<<final_translation[2]
+  << " -matrix " << rotation(0,0) <<","<<rotation(0,1) << ","<< rotation(0,2)
+                << rotation(1,0) <<","<<rotation(1,1) << ","<<rotation(1,2)
+                << rotation(2,0) << ","<<rotation(2,1) << ","<<rotation(2,2) <<std::endl);
 
 }
 
